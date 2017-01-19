@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:stretchColumns="1"
+    android:padding="@dimen/activity_vertical_margin">
+
+    <TableRow>
+        <TextView android:text="Usuário"
+                  android:padding="3dip"/>
+        <EditText android:id="@+id/campoLogin"
+                  android:padding="3dip"
+                  android:inputType="text"/>
+    </TableRow>
+    <TableRow>
+        <TextView android:text="Senha"/>
+        <EditText android:id="@+id/campoSenha"
+            android:inputType="textPassword"/>
+    </TableRow>
+    <TableRow android:gravity="right">
+    <Button android:id="@+id/login"
+        android:text="Login"/>
+    </TableRow>
+</TableLayout>

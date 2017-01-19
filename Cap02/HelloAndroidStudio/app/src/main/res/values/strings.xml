@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">HelloAndroidStudio</string> <!-- Nome do aplicativo -->
+    <!--  <string name="Hello World!"</string>     //Mensagem mostrada na primeira tela -->
+    <!--  <string name="action_settings"</string>  //Label do item de menu da action bar -->
+</resources>

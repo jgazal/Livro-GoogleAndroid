@@ -1,0 +1,40 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 24
+    buildToolsVersion "24.0.3"
+    defaultConfig {
+        applicationId "br.com.livroandroid.cap17.hellowsdl"
+        minSdkVersion 9
+        targetSdkVersion 24
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+repositories {
+    // Repositório do KSOAP2
+    maven { url 'https://oss.sonatype.org/content/repositories/ksoap2-android-releases' }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    compile 'com.android.support:appcompat-v7:24.2.1'
+    testCompile 'junit:junit:4.12'
+
+    // Biblioteca KSOAP2 para web services WSDL
+    compile 'com.google.code.ksoap2-android:ksoap2-android:3.4.0'
+
+    // Biblioteca com classes utilitárias do livro
+    compile 'br.com.livroandroid:android-utils:1.0.2'
+}

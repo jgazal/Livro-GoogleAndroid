@@ -1,0 +1,17 @@
+jgazal@jgazal-V5-171 ~ $ keytool -list -v -keystore "/home/jgazal/.android/debug.keystore" -alias androiddebugkey -storepass android -keypass android
+Nome do alias: androiddebugkey
+Data de criação: 04/07/2016
+Tipo de entrada: PrivateKeyEntry
+Comprimento da cadeia de certificados: 1
+Certificado[1]:
+Proprietário: C=US, O=Android, CN=Android Debug
+Emissor: C=US, O=Android, CN=Android Debug
+Número de série: 1
+Válido de: Mon Jul 04 21:34:51 BRT 2016 a: Wed Jun 27 21:34:51 BRT 2046
+Fingerprints do certificado:
+	 MD5:  7E:7C:FC:7F:C1:DB:A7:C8:BF:84:05:22:10:7C:92:4B
+	 SHA1: 87:C0:0D:C5:8D:42:E4:FA:BE:F1:3C:FE:2C:EF:53:9D:3C:8D:54:99
+	 SHA256: 9A:06:F7:20:E8:FF:58:37:69:4C:08:41:52:EF:22:3B:B3:99:5B:C0:5C:C9:C9:0C:27:5A:DC:0B:6A:E4:BC:8B
+	 Nome do algoritmo de assinatura: SHA1withRSA
+	 Versão: 1
+

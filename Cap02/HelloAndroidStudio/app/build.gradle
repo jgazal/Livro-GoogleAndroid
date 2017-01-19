@@ -1,0 +1,30 @@
+apply plugin: 'com.android.application' //Aplica o plugin 'android' no script de compilação Gradle
+
+android {                       //Configura os parâmetros de compilação do módulo
+    compileSdkVersion 24        //API Level usada para compilar o código (deve ser sempre a última)
+    buildToolsVersion "24.0.3"  //Versão do Android SDK Build-tools baixada pelo SDK Manager
+    defaultConfig {             //Configura os itens do AndroidManifest.xml
+        applicationId "br.com.livroandroid.cap2.helloandroidstudio" //Pacote do projeto
+        minSdkVersion 24        //API Level mínima que o aplicativo suporta
+        targetSdkVersion 24     //API Level máxima utilizada para otimizar o build na compilação
+        versionCode 1           //Código para identificar o aplicativo no Google Play
+        versionName "1.0"       //Versão do código com formato amigável para o usuário
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {                //Configura os tipos de build (debug e release)
+        release {               //Configura o build do tipo release
+            minifyEnabled false //Configura para utilizar o proguard e ofuscar o código
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {                  //Declara as dependências (bibliotecas) para compilar do projeto
+    compile fileTree(dir: 'libs', include: ['*.jar'])   //Inclui todos os arquivos .jar da pasta
+                                                        //libs na compilação
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    compile 'com.android.support:appcompat-v7:24.2.1'
+    testCompile 'junit:junit:4.12'
+}
